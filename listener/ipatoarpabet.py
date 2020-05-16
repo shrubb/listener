@@ -216,14 +216,14 @@ def test():
                     #print '%s\n%s\n'%(description,close[0])
                 bad += 1
             if not i%1000:
-                print 'good=%s bad=%s close=%s good=%0.3f (good_or_close=%0.3f) avg choices %0.1f'%(
+                print('good=%s bad=%s close=%s good=%0.3f (good_or_close=%0.3f) avg choices %0.1f'%(
                     good,bad, close_count,
                     (good/float(good+bad or 1)), 
                     ((good+close_count)/float(good+bad or 1)),
                     total_tlength/float(good+bad)
-                )
+                ))
     finally:
-        print '%s good %s bad %s'%(good,bad, (good/float(good+bad or 1)))
+        print('%s good %s bad %s'%(good,bad, (good/float(good+bad or 1))))
 
 if __name__ == '__main__':
     test()
